@@ -1,109 +1,97 @@
 import {
-  GridItem,
-  Image,
-  Link,
-  SimpleGrid,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
-import React from "react";
+	Box,
+	Flex,
+	GridItem,
+	Image,
+	Link,
+	SimpleGrid,
+	Text,
+	useBreakpointValue,
+	useColorModeValue,
+	VStack,
+} from '@chakra-ui/react';
+import React from 'react';
 
-import { colors } from "../../theme";
-import SectionContainer from "../SectionContainer";
+import { colors } from '../../theme';
+import SectionContainer from '../SectionContainer';
 
 const Bio = ({ secondary }) => (
-  <GridItem>
-    <VStack m="auto" w="75%" spacing="12px" pt="5%">
-      <Text>
-        Hi, I&apos;m Jarrod! I studied computer science at the University of
-        Toronto, and I&apos;m currently working at{" "}
-        <Link href="https://www.sailpoint.com/" isExternal>
-          SailPoint
-        </Link>{" "}
-        as a{" "}
-        <strong style={{ color: secondary }}>Senior Software Engineer</strong>{" "}
-        on the{" "}
-        <Link
-          href="https://www.sailpoint.com/products/integrations/workflows/"
-          isExternal
-        >
-          Platform Workflows team
-        </Link>
-        . Prior to that, I worked at{" "}
-        <Link href="https://www.citigroup.com/citi/" isExternal>
-          Citigroup
-        </Link>{" "}
-        &{"  "}
-        <Link href="https://citylitics.com/" isExternal>
-          Citylitics
-        </Link>{" "}
-        as a{" "}
-        <strong style={{ color: secondary }}>Software Developer Intern</strong>.
-      </Text>
-      <Text>
-        I enjoy creating scalable & elegant web/mobile applications that have a
-        real world impact. I&apos;m always learning new technologies, either
-        through{" "}
-        <Link href="https://devpost.com/jcserv" isExternal>
-          hackathons
-        </Link>{" "}
-        or self-study - and recently became an{" "}
-        <strong style={{ color: secondary }}>
-          <Link
-            href="https://www.credly.com/badges/517ae2cf-990f-4e3f-acf7-c7dc692c67a0/public_url"
-            isExternal
-          >
-            AWS Certified Developer
-          </Link>
-        </strong>
-        .
-      </Text>
-    </VStack>
-  </GridItem>
+	<GridItem>
+		<VStack m='auto'  spacing='12px' pt='5%'>
+			<Text>
+				Hi, I&apos;m Md Aminul Haque! I studied computer science at the Brac
+				University, Bangladesh, and I&apos;m currently working at{' '}
+				<Link href='https://thinkcrypt.io/' isExternal>
+					<strong>Thinkcrypt.io</strong>
+				</Link>{' '}
+				as a <strong style={{ color: secondary }}>Software Engineer</strong> on
+				the Development team. Prior to that, I worked at{' '}
+				<Link
+					href='https://www.bracu.ac.bd/academics/departments/computer-science-and-engineering'
+					isExternal
+				>
+					<strong>
+						Department of Computer Science and Engineering, Brac University
+					</strong>
+				</Link>{' '}
+				as a <strong style={{ color: secondary }}>Teaching Assistant</strong>.
+			</Text>
+			<Text>
+				As a Software Engineer, I am eager to apply my knowledge and skills in
+				programming, data analysis, and software development to a challenging
+				role in a dynamic and innovative organization. I am a team player and a
+				quick learner. Always in search of knowledge to make myself better in
+				what I do.
+			</Text>
+		</VStack>
+	</GridItem>
 );
 
 const Headshot = () => (
-  <GridItem>
-    <Image
-      m="auto"
-      src="/me.jpg"
-      alt="Jarrod Servilla"
-      zIndex={1}
-      className="image"
-      onClick={() => {
-        window.open("http://linkedin.com/in/jarrod-servilla");
-      }}
-    />
-  </GridItem>
+	<Flex align='center' justify='center'>
+		<Box h={'300px'} w={'300px'}>
+			<Image
+				h='100%'
+				w={'100%'}
+				objectFit='cover'
+				m='auto'
+				src='/aminul.jpg'
+				alt='Jarrod Servilla'
+				zIndex={1}
+				className='image'
+				onClick={() => {
+					window.open('http://linkedin.com/in/jarrod-servilla');
+				}}
+			/>
+		</Box>
+	</Flex>
 );
 
 export default function About() {
-  const shouldAlternate = useBreakpointValue({ base: false, md: true });
-  const secondary = useColorModeValue(
-    colors.secondary.light,
-    colors.secondary.dark
-  );
-  return (
-    <SectionContainer
-      id="about"
-      name="about"
-      headerMt="-5%"
-      headerText="About Me"
-      useHeaderStyle
-    >
-      <SimpleGrid
-        pl="10%"
-        pt="5%"
-        pr="10%"
-        spacing={12}
-        columns={[1, null, 2]}
-        justifyContent="center"
-      >
-        {shouldAlternate ? <Bio secondary={secondary} /> : <Headshot />}
-        {shouldAlternate ? <Headshot /> : <Bio secondary={secondary} />}
-      </SimpleGrid>
-    </SectionContainer>
-  );
+	const shouldAlternate = useBreakpointValue({ base: false, md: true });
+	const secondary = useColorModeValue(
+		colors.secondary.light,
+		colors.secondary.dark
+	);
+	return (
+		<SectionContainer
+			id='about'
+			name='about'
+			headerMt='-5%'
+			headerText='About Me'
+			useHeaderStyle
+		>
+			<SimpleGrid
+				pl='10%'
+				pt='5%'
+				pr='10%'
+				spacing={12}
+				columns={[1, null, 2]}
+				justifyContent='center'
+			>
+				{shouldAlternate ? <Bio secondary={secondary} /> : <Headshot />}
+				{shouldAlternate ? <Headshot /> : <Bio secondary={secondary} />}
+			</SimpleGrid>
+		</SectionContainer>
+	);
 }
