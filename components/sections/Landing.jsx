@@ -56,7 +56,7 @@ export default function Landing() {
             as="strong"
             _hover={{ color: secondary }}
             className={styles.learn}
-            // color={''}
+            cursor='pointer'
           >
             Learn More
           </Text>

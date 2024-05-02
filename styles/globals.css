@@ -31,3 +31,8 @@ a {
 .link {
   color: #077bff i !important;
 }
+
+::selection {
+  background-color: #A77267;
+  color: #ffffff;
+}
