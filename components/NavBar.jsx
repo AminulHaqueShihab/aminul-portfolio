@@ -39,7 +39,7 @@ const navBtns = [
 	},
 	{
 		label: 'Blog',
-		href: 'https://jarrod-servilla.medium.com/',
+		href: 'https://medium.com/@aminul.haque.shihab',
 	},
 ];
 
