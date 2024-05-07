@@ -67,7 +67,19 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-0aab809b'], (function (workbox) { 'use strict';
+define(['./workbox-74d02f44'], (function (workbox) { 'use strict';
+
+  /**
+  * Welcome to your Workbox-powered service worker!
+  *
+  * You'll need to register this file in your web app.
+  * See https://goo.gl/nhQhGp
+  *
+  * The rest of the code is auto-generated. Please don't update this file
+  * directly; instead, make changes to your Workbox build configuration
+  * and re-run your build process.
+  * See https://goo.gl/2aRDsh
+  */
 
   importScripts();
   self.skipWaiting();
@@ -88,6 +100,7 @@ define(['./workbox-0aab809b'], (function (workbox) { 'use strict';
             headers: response.headers
           });
         }
+
         return response;
       }
     }]
