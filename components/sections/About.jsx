@@ -56,7 +56,7 @@ const Headshot = () => (
 				objectFit='cover'
 				m='auto'
 				src='/aminul.jpg'
-				alt='Jarrod Servilla'
+				alt='Md Aminul Haque'
 				zIndex={1}
 				className='image'
 				onClick={() => {
