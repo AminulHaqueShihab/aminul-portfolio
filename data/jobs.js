@@ -1,8 +1,20 @@
 const jobs = [
 	{
+		workplace: 'Zolo Inc.',
+		position: 'Software Engineer',
+		duration: ['Sep 2024 - Present'],
+		description: [
+			'Design and develop full-stack web applications using the MERN stack with PostgreSQL and Prisma for optimized database management.',
+			'Collaborate with cross-functional teams to deliver scalable ERP systems tailored to business needs.',
+			'Architect and optimize advanced data models and queries with Prisma ORM for efficient, high-performance database interactions.',
+			'Optimize and modernize legacy codebases to improve performance, security, and long-term maintainability across multiple projects.',
+		],
+		url: 'https://zoloinc.com/',
+	},
+	{
 		workplace: 'Thinkcrypt.io',
 		position: 'Software Engineer',
-		duration: ['Oct 2023 - Present'],
+		duration: ['Oct 2023 - Sep 2024'],
 		description: [
 			'Accountable for constructing and upkeeping high-quality web applications utilizing Next.js, TypeScript, and Chakra UI.',
 			'Developing reusable code and libraries to streamline future development.',
