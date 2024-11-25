@@ -1,5 +1,32 @@
 const projects = [
 	{
+		name: 'Eventpro',
+		description: `An Highly Responsive, User-friendly Event Ticketing platform with separate CMS for agencies and admin, and
+ an event CRM for creating and managing events, transaction and tickets. Led the entire project lifecycle from initial planning and system design to full-stack development, including
+ both frontend and backend components. Integrated SSLcommerz as the payment gateway to facilitate secure online transactions and implemented
+ PDF ticket generation with Puppeteer, incorporating email notifications with attached tickets using
+ Nodemailer. Enabled user-friendly ticket purchasing for registered and guest users, with options to download tickets
+ directly from the platform.
+`,
+		pic: '/eventpro.png',
+		tech: [
+			'Next.Js',
+			'Express.Js',
+			'MongoDB',
+			'TypeScript',
+			'Chakra Ui',
+			'Redux Toolkit',
+			'Framer Motion',
+		],
+		links: [
+			{
+				label: 'Demo',
+				icon: 'link',
+				url: 'https://eventpro-ticketing.vercel.app/',
+			},
+		],
+	},
+	{
 		name: 'Bazar365',
 		description: `As part of a dynamic team, I contributed to a comprehensive e-commerce solution designed to elevate user engagement and streamline performance. Utilizing Next.js, TypeScript, Chakra UI, and Redux Toolkit, the application delivers a responsive interface, customizable dark mode, and fluid animations. My role involved frontend development tasks, such as integrating APIs, managing state, and crafting visually appealing UI components.`,
 		pic: '/bazar365.png',
